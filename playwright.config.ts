@@ -30,8 +30,8 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
 
     baseURL: 'https://www.boddlelearning.com/',
-    trace: 'on-first-retry',
-    screenshot: 'on',
+    trace: 'on-first-retry',//Log tracing configuration
+    screenshot: 'on',//Put the value inside the ''
     video:'on'
   },
 

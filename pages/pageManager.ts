@@ -8,6 +8,7 @@ import { LoginPage } from "./loginPage";
 import { TeacherHomePage } from "./teacherhomePage";
 import { TeacherDashboardPage } from "./teacherDashboardPage";
 
+
 export class PageManager{
 
     private readonly page: Page
@@ -19,10 +20,11 @@ export class PageManager{
     private readonly loginPage: LoginPage
     private readonly teacherHomePage: TeacherHomePage
     private readonly teacherDashboadPage: TeacherDashboardPage
+    
 
     constructor(page:Page){
         this.page = page
-
+        
         this.basePage = new BasePage(this.page)
         this.homePage = new homePage(this.page)
         this.teacherSignupPage = new TeacherSignupPage(this.page)
@@ -32,6 +34,7 @@ export class PageManager{
         this.teacherHomePage = new TeacherHomePage(this.page)
         this.teacherDashboadPage = new TeacherDashboardPage(this.page)
     }
+    
 
     onBasePage(){
         return this.basePage

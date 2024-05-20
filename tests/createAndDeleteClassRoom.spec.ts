@@ -30,7 +30,7 @@ test("Add new Classroom", async ({page})=>{
 
     await pm.onTeacherHomePage().goToClassroomButton.click()
     await pm.onBasePage().validadeCurrentUrl(page,urls.new_dashboard_page)
-    await expect(pm.onTeacherDashboardPage().wellcomeHeader).toHaveText("Welcome to 1" + data.classroomName )
+    await expect(pm.onTeacherDashboardPage().wellcomeHeader).toHaveText("Welcome to " + data.classroomName )
 
     await pm.onTeacherDashboardPage().deleteClassRoom(data.classroomName)
     await pm.onBasePage().validadeCurrentUrl(page,urls.teacher_page)
